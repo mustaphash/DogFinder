@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#Ex\\DogFinder\\Models\\Models.csproj",
+      "projectUniqueName": "D:\\git\\DogFinder\\src\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "D:\\C#Ex\\DogFinder\\Models\\Models.csproj",
+      "projectPath": "D:\\git\\DogFinder\\src\\Models\\Models.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\C#Ex\\DogFinder\\Models\\obj\\",
+      "outputPath": "D:\\git\\DogFinder\\src\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",

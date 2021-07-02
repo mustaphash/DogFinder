@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "85JdO3W0FqGLGofX5VuND5nSt0U/UAyhmTWL2tF0W91EsBOe6PFgav5AttUdDzBq9y7jRA5xQS4odaP3NLwLCg==",
+  "dgSpecHash": "skSzljBIz91/QlF4LRAMWldkOgH6BbAKV3kgj4dJlr25Z6jZeC53dThIftuBy3oTt3ix5Zr9GCFep30h12YYpQ==",
   "success": true,
-  "projectFilePath": "D:\\C#Ex\\DogFinder\\External.Finder\\External.Finders.csproj",
+  "projectFilePath": "D:\\git\\DogFinder\\src\\External.Finder\\External.Finders.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],

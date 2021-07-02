@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#Ex\\DogFinder\\DogFinder\\DogFinder.csproj": {}
+    "D:\\git\\DogFinder\\src\\DogFinder\\DogFinder.csproj": {}
   },
   "projects": {
-    "D:\\C#Ex\\DogFinder\\DogFinder\\DogFinder.csproj": {
+    "D:\\git\\DogFinder\\src\\DogFinder\\DogFinder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#Ex\\DogFinder\\DogFinder\\DogFinder.csproj",
+        "projectUniqueName": "D:\\git\\DogFinder\\src\\DogFinder\\DogFinder.csproj",
         "projectName": "DogFinder",
-        "projectPath": "D:\\C#Ex\\DogFinder\\DogFinder\\DogFinder.csproj",
+        "projectPath": "D:\\git\\DogFinder\\src\\DogFinder\\DogFinder.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\C#Ex\\DogFinder\\DogFinder\\obj\\",
+        "outputPath": "D:\\git\\DogFinder\\src\\DogFinder\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,10 +1,9 @@
-﻿using External.Finder.Query.Interface;
+﻿using External.Finders.Query.Interface;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace External.Finder.Query
@@ -29,8 +28,8 @@ namespace External.Finder.Query
             HttpResponseMessage response = await httpClient.GetAsync($"http://62.171.141.18/?fbclid=IwAR3YE74zv_w-pN6hJNNq5_oljKj3821fsXgupggehcRF2gZ9SmQX72L3sME");
             string content = await response.Content.ReadAsStringAsync();
 
-            var places = JsonConvert.DeserializeObject<List<Place>>(content);
-            List<> townLandmarks = places.Where(p => p.Address.Contains(townName)).ToList();
+            var finders = JsonConvert.DeserializeObject<List<Finder>>(content);
+            List<Finder> townLandmarks = finders.Where(p => p.Address.Contains(townName)).ToList();
 
             return townLandmarks;
         }
