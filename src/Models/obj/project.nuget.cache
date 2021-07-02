@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wbQu2QxckClmSvgdGF2hig0ySS2eE8Ol4gFTmRFiBGsgfhe5buHDJfAJDsyaCvPBJDzpnNHqzhv2SFTjoBIuhA==",
+  "success": true,
+  "projectFilePath": "D:\\C#Ex\\DogFinder\\Models\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogFinder", "DogFinder\DogFinder.csproj", "{1D315E3E-C697-4850-B66C-04634AE322C5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4977D104-5EF4-4065-AC23-CBACD1F0D354} = {4977D104-5EF4-4065-AC23-CBACD1F0D354}
+		{1744D882-FECF-4B07-88DF-15EFB944F00B} = {1744D882-FECF-4B07-88DF-15EFB944F00B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{4977D104-5EF4-4065-AC23-CBACD1F0D354}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1744D882-FECF-4B07-88DF-15EFB944F00B} = {1744D882-FECF-4B07-88DF-15EFB944F00B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "External.Finders", "External.Finder\External.Finders.csproj", "{1744D882-FECF-4B07-88DF-15EFB944F00B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D315E3E-C697-4850-B66C-04634AE322C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D315E3E-C697-4850-B66C-04634AE322C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D315E3E-C697-4850-B66C-04634AE322C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D315E3E-C697-4850-B66C-04634AE322C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4977D104-5EF4-4065-AC23-CBACD1F0D354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4977D104-5EF4-4065-AC23-CBACD1F0D354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4977D104-5EF4-4065-AC23-CBACD1F0D354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4977D104-5EF4-4065-AC23-CBACD1F0D354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1744D882-FECF-4B07-88DF-15EFB944F00B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1744D882-FECF-4B07-88DF-15EFB944F00B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1744D882-FECF-4B07-88DF-15EFB944F00B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1744D882-FECF-4B07-88DF-15EFB944F00B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30511B37-48C4-4952-A767-28B85E9A8F08}
+	EndGlobalSection
+EndGlobal
