@@ -1,10 +1,17 @@
-﻿namespace DogFinder
+﻿using Models;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+namespace DogFinder
 {
     class Program
     {
-        public static void Main(string[] args)
-        {
+        private static object _httpClientContext;
 
+        static async Task Main(string[] args)
+        {
+            
         }
     }
 }
