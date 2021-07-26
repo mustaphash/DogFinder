@@ -6,6 +6,6 @@ namespace External.Finders.Query.Interface
 {
     public interface IGetRandomDogQuery
     {
-        Task<List<Find>> ExecuteAsync(string findDog);
+        Task<List<Find>> ExecuteAsync();
     }
 }

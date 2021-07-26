@@ -9,14 +9,15 @@ namespace DogFinder
     {
         static void Main(string[] args)
         {
-          // IGetRandomDogQuery dogFind = new GetRandomDogQuery();
-          // var dogs = dogFind.ExecuteAsync();
+            IGetRandomDogQuery dogFind = new GetRandomDogQuery();
+            var dogs = dogFind.ExecuteAsync();
+
 
             string uniqueName = Guid.NewGuid().ToString();
 
             using (WebClient client = new WebClient())
             {
-                client.DownloadFile(new Uri("https://dog.ceo/api/breeds/image/random"), $@"D:\Images\{uniqueName}.jpg");
+                client.DownloadFile(new Uri(dogs), $@"D:\Images\{uniqueName}.jpg");
             }
         }
     }

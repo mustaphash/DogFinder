@@ -22,14 +22,14 @@ namespace External.Finder.Query
           _httpClientContext = httpClientContext;
       }
 
-      public async Task<List<Find>> ExecuteAsync(string findDog)
+      public async Task<List<Find>> ExecuteAsync()
       {
           var httpClient = _httpClientContext.GetClient();
           HttpResponseMessage response = await httpClient.GetAsync($"https://dog.ceo/api/breeds/image/random");
           string content = await response.Content.ReadAsStringAsync();
  
           var finders = JsonConvert.DeserializeObject<List<Find>>(content);
-          List<Find> randomDogs = finders.Where(p => p.Message.Contains(findDog)).ToList();
+          List<Find> randomDogs = finders.Where(p => p.Message.Contains("Message")).ToList();
  
           return randomDogs;
       }
