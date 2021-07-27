@@ -1,9 +1,6 @@
 ﻿using External.Finders.Query.Interface;
 using Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -30,7 +27,6 @@ namespace External.Finder.Query
             string content = await response.Content.ReadAsStringAsync();
 
             var finders = JsonConvert.DeserializeObject<Find>(content);
-           // <Find> randomDogs = finders.Where(p => p.Message.Contains("Message")).ToList();
 
             return finders;
         }
