@@ -1,27 +1,18 @@
-﻿using External.Finder.Query;
-using External.Finders.Query.Interface;
-using System;
-using System.Net;
-using System.Threading.Tasks;
+﻿using CommandLine;
+using DogFinder.Verb;
+using DogFinder.Verb.Parser;
+using System.Collections.Generic;
 
 namespace DogFinder
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
-            IGetRandomDogQuery getDog = new GetRandomDogQuery();
-            var dogs = await getDog.ExecuteAsync();
-
-            string uniqueName = Guid.NewGuid().ToString();
-            Console.Write("Write file location to save image: ");
-            string fileName = Console.ReadLine();
-
-            using (WebClient client = new WebClient())
-            {
-                client.DownloadFile(new Uri(dogs.Message), $@"{fileName}\{uniqueName}.jpg");
-                Console.WriteLine(dogs.Status);
-            }
+            Parser.Default.ParseArguments<FileLocationVerb>(args)
+                .MapResult(
+                  (FileLocationVerb opts) => new RandomDogParser().Parse(opts).GetAwaiter().GetResult(),
+                  (IEnumerable<Error> errs) => new ExeptionParser().ExceptionHandling(errs).GetAwaiter().GetResult());
         }
     }
 }
