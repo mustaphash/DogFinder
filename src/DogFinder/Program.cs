@@ -14,10 +14,12 @@ namespace DogFinder
             var dogs = await getDog.ExecuteAsync();
 
             string uniqueName = Guid.NewGuid().ToString();
+            Console.Write("Write file location to save image: ");
+            string fileName = Console.ReadLine();
 
             using (WebClient client = new WebClient())
             {
-                client.DownloadFile(new Uri(dogs.Message), $@"D:\Images\{uniqueName}.jpg");
+                client.DownloadFile(new Uri(dogs.Message), $@"{fileName}\{uniqueName}.jpg");
                 Console.WriteLine(dogs.Status);
             }
         }
