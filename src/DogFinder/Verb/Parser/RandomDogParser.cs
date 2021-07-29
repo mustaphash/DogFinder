@@ -1,7 +1,6 @@
 ﻿using External.Finder.Query;
+using External.Finders.Query;
 using External.Finders.Query.Interface;
-using System;
-using System.Net;
 using System.Threading.Tasks;
 
 namespace DogFinder.Verb.Parser
@@ -13,13 +12,9 @@ namespace DogFinder.Verb.Parser
             IGetRandomDogQuery getDog = new GetRandomDogQuery();
             var dogs = await getDog.ExecuteAsync();
 
-            string uniqueName = Guid.NewGuid().ToString();
+            IFindDogQuery findDog = new FindDogQuery();
+            var dog = await findDog.ExecuteAsync(dogs,fileName.Name);
 
-            using (WebClient client = new WebClient())
-            {
-                client.DownloadFile(new Uri(dogs.Message), $@"{fileName.Name}\{uniqueName}.jpg");
-                Console.WriteLine(dogs.Status);
-            }
             return 0;
         }
 
