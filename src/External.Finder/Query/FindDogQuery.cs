@@ -1,5 +1,4 @@
-﻿using DogFinder.Verb;
-using External.Finder;
+﻿using External.Finder;
 using External.Finders.Query.Interface;
 using Models;
 using System;
@@ -23,7 +22,7 @@ namespace External.Finders.Query
             _httpClientContext = httpClientContext;
         }
 
-        public async Task<Find> ExecuteAsync(Find getDog,string fileName)
+        public async Task<Find> ExecuteAsync(Find getDog, string fileName)
         {
             string uniqueName = Guid.NewGuid().ToString();
 
@@ -32,8 +31,7 @@ namespace External.Finders.Query
                 client.DownloadFile(new Uri(getDog.Message), $@"{fileName}\{uniqueName}.jpg");
                 Console.WriteLine(getDog.Status);
             }
-            return 0;
-            
+            return getDog;
         }
     }
 }
