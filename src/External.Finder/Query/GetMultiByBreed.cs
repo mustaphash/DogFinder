@@ -3,6 +3,7 @@ using External.Finders.Query.Interface;
 using Models;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -22,14 +23,14 @@ namespace External.Finders.Query
             _httpClientContext = httpClientContext;
         }
 
-        public async Task<ByBreed> ExecuteAsync()
+        public async Task<List<ByBreed>> ExecuteAsync()
         {
             int numberOfImages = int.Parse(Console.ReadLine());
             var httpClient = _httpClientContext.GetClient();
             HttpResponseMessage response = await httpClient.GetAsync($"https://dog.ceo/api/breeds/image/random/{numberOfImages}");
             string content = await response.Content.ReadAsStringAsync();
 
-            var breeds = JsonConvert.DeserializeObject<ByBreed>(content);
+            var breeds = JsonConvert.DeserializeObject<List<ByBreed>>(content);
 
             return breeds;
         }
