@@ -23,6 +23,8 @@ namespace External.Finders.Query
 
         public async Task<ByBreed> ExecuteAsync(ByBreed getMulti, string fileName)
         {
+            IGetMultiByBreed getBreeds = new GetMultiByBreed();
+            var breed = getBreeds.ExecuteAsync();
             string uniqueName = Guid.NewGuid().ToString();
 
             using (WebClient client = new WebClient())

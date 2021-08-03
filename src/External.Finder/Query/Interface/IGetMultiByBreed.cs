@@ -6,6 +6,6 @@ namespace External.Finders.Query.Interface
 {
     public interface IGetMultiByBreed
     {
-        Task<List<ByBreed>> ExecuteAsync();
+        Task<List<ByBreed>> ExecuteAsync(string fileName);
     }
 }

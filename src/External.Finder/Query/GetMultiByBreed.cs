@@ -4,6 +4,7 @@ using Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -23,7 +24,7 @@ namespace External.Finders.Query
             _httpClientContext = httpClientContext;
         }
 
-        public async Task<List<ByBreed>> ExecuteAsync()
+        public async Task<List<ByBreed>> ExecuteAsync(string getMulti)
         {
             int numberOfImages = int.Parse(Console.ReadLine());
             var httpClient = _httpClientContext.GetClient();
@@ -31,8 +32,9 @@ namespace External.Finders.Query
             string content = await response.Content.ReadAsStringAsync();
 
             var breeds = JsonConvert.DeserializeObject<List<ByBreed>>(content);
+            List<ByBreed> byBreeds = breeds.Where(p => p.Message.Contains(getMulti)).ToList();
 
-            return breeds;
+            return byBreeds;
         }
 
     }

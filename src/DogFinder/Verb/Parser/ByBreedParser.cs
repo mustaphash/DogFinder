@@ -1,9 +1,5 @@
 ﻿using External.Finders.Query;
 using External.Finders.Query.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DogFinder.Verb.Parser
