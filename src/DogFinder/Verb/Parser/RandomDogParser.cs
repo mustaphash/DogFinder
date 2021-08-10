@@ -13,7 +13,7 @@ namespace DogFinder.Verb.Parser
             var dogs = await getDog.ExecuteAsync();
 
             IFindDogQuery findDog = new FindDogQuery();
-            var dog = await findDog.ExecuteAsync(dogs,fileName.Name);
+            var dog = await findDog.ExecuteAsync(dogs,fileName.Folder);
 
             return 0;
         }

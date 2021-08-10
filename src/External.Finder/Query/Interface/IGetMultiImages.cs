@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace External.Finders.Query.Interface
 {
-    public interface IGetMultiByBreed
+    public interface IGetMultiImages
     {
-        Task<List<ByBreed>> ExecuteAsync(string fileName);
+        Task<List<MultiDogs>> ExecuteAsync();
     }
 }
