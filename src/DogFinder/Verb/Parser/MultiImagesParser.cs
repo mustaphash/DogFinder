@@ -10,9 +10,9 @@ namespace DogFinder.Verb.Parser
         {
             IGetMultiImages getMultiImages = new GetMultiImages();
             var multiImages = await getMultiImages.ExecuteAsync();
-
-            IFindMultiImagesQuery findDog = new FindMultiImagesQuery(multiImages);
-            var multi = await findDog.ExecuteAsync(multiImages, fileName.Folder);
+           
+            IFindMultiImagesQuery findDog = new FindMultiImagesQuery();
+            var multi = await findDog.ExecuteAsync(multiImages,fileName.Folder);
 
             return 0;
         }

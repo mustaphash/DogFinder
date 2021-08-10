@@ -25,11 +25,11 @@ namespace External.Finders.Query
         {
             string uniqueName = Guid.NewGuid().ToString();
 
-            foreach (var item in getMulti.Message)
+            foreach (var dogs in getMulti.Message)
             {
                 using (WebClient client = new WebClient())
                 {
-                    client.DownloadFile(new Uri(item), $@"{folder}\{uniqueName}.jpg");
+                    client.DownloadFile(new Uri(dogs), $@"{folder}\{uniqueName}.jpg");
                     Console.WriteLine(getMulti.Status);
                 }
             }
