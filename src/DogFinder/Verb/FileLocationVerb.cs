@@ -7,8 +7,5 @@ namespace DogFinder.Verb
     {
         [Option('f', "folder", Required = true, HelpText = "Folder to save.")]
         public string Folder { get; set; }
-
-        [Option('c', "imageCount", Required = true, HelpText = "Folder to save.")]
-        public string ImageCount { get; set; }
     }
 }

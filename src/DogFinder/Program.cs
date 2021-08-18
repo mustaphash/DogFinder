@@ -9,10 +9,11 @@ namespace DogFinder
     {
         static void Main(string[] args)
         {
-            Parser.Default.ParseArguments<FileLocationVerb>(args)
+            Parser.Default.ParseArguments<FileLocationVerb,ImageCountVerb>(args)
                 .MapResult(
                   (FileLocationVerb opts) => new RandomDogParser().Parse(opts).GetAwaiter().GetResult(),
-                  (IEnumerable<Error> errs) => new ExeptionParser().ExceptionHandling(errs).GetAwaiter().GetResult());
+                  (ImageCountVerb opts) => new MultiImagesParser().Parse(opts).GetAwaiter().GetResult(),
+                  (IEnumerable < Error > errs) => new ExeptionParser().ExceptionHandling(errs).GetAwaiter().GetResult());
         }
     }
 }

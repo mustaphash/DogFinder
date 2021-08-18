@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 
 namespace External.Finders.Query.Interface
 {
-    public interface IFindDogQuery
+    public interface IFindMultiImagesCommand
     {
-        Task<Find> ExecuteAsync(Find getDog, string fileName);
+        Task ExecuteAsync(MultiDogs getMulti, int count);
     }
 }

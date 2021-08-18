@@ -7,13 +7,13 @@ namespace DogFinder.Verb.Parser
 {
     public class RandomDogParser
     {
-        public async Task<int> Parse(FileLocationVerb fileName)
+        public async Task<int> Parse(FileLocationVerb folder)
         {
             IGetRandomDogQuery getDog = new GetRandomDogQuery();
             var dogs = await getDog.ExecuteAsync();
 
-            IFindDogQuery findDog = new FindDogQuery();
-            var dog = await findDog.ExecuteAsync(dogs,fileName.Folder);
+            IFindDogCommand findDog = new FindDogCommand();
+            var dog = await findDog.ExecuteAsync(dogs,folder.Folder);
 
             return 0;
         }

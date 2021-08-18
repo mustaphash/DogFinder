@@ -6,14 +6,14 @@ namespace DogFinder.Verb.Parser
 {
     public class MultiImagesParser
     {
-        public async Task<int> Parse(FileLocationVerb fileName)
+        public async Task<int> Parse(ImageCountVerb imageCount)
         {
             IGetMultiImages getMultiImages = new GetMultiImages();
-            var multiImages = await getMultiImages.ExecuteAsync();
+            var multiImages = await getMultiImages.ExecuteAsync(imageCount.ImageCount);
            
-            IFindMultiImagesQuery findDog = new FindMultiImagesQuery();
-            var multi = await findDog.ExecuteAsync(multiImages,fileName.Folder);
-
+            IFindMultiImagesCommand findDog = new FindMultiImagesCommand();
+            await findDog.ExecuteAsync(multiImages, imageCount.ImageCount);
+            
             return 0;
         }
     }

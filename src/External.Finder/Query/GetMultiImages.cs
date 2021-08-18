@@ -2,8 +2,6 @@
 using External.Finders.Query.Interface;
 using Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -23,14 +21,13 @@ namespace External.Finders.Query
             _httpClientContext = httpClientContext;
         }
 
-        public async Task<List<MultiDogs>> ExecuteAsync()
+        public async Task<MultiDogs> ExecuteAsync(int numberOfImages)
         {
-            //int numberOfImages = int.Parse(Console.ReadLine());
             var httpClient = _httpClientContext.GetClient();
-            HttpResponseMessage response = await httpClient.GetAsync($"https://dog.ceo/api/breeds/image/random/3");
+            HttpResponseMessage response = await httpClient.GetAsync($"https://dog.ceo/api/breeds/image/random/{numberOfImages}");
             string content = await response.Content.ReadAsStringAsync();
 
-            List<MultiDogs> breeds = JsonConvert.DeserializeObject<List<MultiDogs>>(content);
+            MultiDogs breeds = JsonConvert.DeserializeObject<MultiDogs>(content);
 
             return breeds;
         }
